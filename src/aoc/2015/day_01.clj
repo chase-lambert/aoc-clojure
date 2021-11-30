@@ -1,21 +1,21 @@
 (ns aoc.2015.day-01)
 
-(def input 
+(def input
   (slurp "resources/2015/day_01.txt"))
 
-(def data
+(def directions
   (map {\( 1, \) -1} input))
 
-(defn part-1 [data]
-  (apply + data))
+(defn part-1 [directions]
+  (apply + directions))
 
-(defn part-2 [data]
-  (let [running-total (reductions + data)]
+(defn part-2 [directions]
+  (let [current-floor (reductions + directions)]
     (inc
-     (.indexOf running-total -1))))
+     (.indexOf current-floor -1))))
 
 (comment
-  (part-1 data) ;; 74
-  (part-2 data) ;; 1795
-  ,) 
-  
+  (part-1 directions) ;; 74
+  (part-2 directions) ;; 1795
+  )
+

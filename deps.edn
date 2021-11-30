@@ -1,1 +1,2 @@
-{:deps {org.clojure/clojure {:mvn/version "1.11.0-alpha3"}}}
+{:deps {org.clojure/clojure    {:mvn/version "1.11.0-alpha3"}
+        org.clj-commons/digest {:mvn/version "1.4.100"}}}
