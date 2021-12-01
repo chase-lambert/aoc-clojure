@@ -17,11 +17,15 @@
        i)))
 
 (defn part-2 [measurements]
-  (let [parted (partition 3 1 measurements)]
-    (count (for [i (range 1 (count parted))
-                 :when (> (apply + (nth parted i)) (apply + (nth parted (dec i))))]
-              i))))
+  (let [windows (partition 3 1 measurements)]
+    (count 
+      (for [i (range 1 (count windows))
+            :let [sum-a (apply + (nth windows (dec i)))
+                  sum-b (apply + (nth windows i))]
+            :when (> sum-b sum-a)]
+         i))))
   
 (comment
-  (part-1 measurements)
-  (part-2 measurements))
+  (part-1 measurements) ;; 1696
+  (part-2 measurements) ;; 1737
+  ,)
