@@ -1,4 +1,6 @@
-(ns practice.core)
+(ns aoc.core)
 
-(defn main [& args])
+(defn -main [& _args])
+
+
 

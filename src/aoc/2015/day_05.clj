@@ -21,21 +21,19 @@
 
 (defn no-forbidden-strings? [s]
   (let [forbidden ["ab" "cd" "pq" "xy"]]
-    (not 
-      (some #(string/includes? s %) forbidden))))
+    (not
+     (some #(string/includes? s %) forbidden))))
 
 (defn nice-string? [s]
   (and (three-vowels? s) (double-letters? s) (no-forbidden-strings? s)))
 
 (defn part-1 [strings]
   (count
-    (filter nice-string? strings)))
+   (filter nice-string? strings)))
 
 (defn part-2 [strings])
- 
 
 (comment
   (part-1 strings) ;; 255
-  (part-2 strings)
-  ,)
+  (part-2 strings))
 

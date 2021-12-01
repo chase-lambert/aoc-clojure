@@ -12,7 +12,8 @@
    (for [i (range)
          :let [k (str secret-key i)
                digest (digest/md5 k)
-               target (apply str (repeat desired-leading-zeroes \0))]
+               target (apply str
+                             (repeat desired-leading-zeroes \0))]
          :when (string/starts-with? digest target)]
      i)))
 
@@ -26,4 +27,5 @@
   (part-1 input) ;; 117946
   (part-2 input) ;; 3938038
   )
+
 

@@ -26,19 +26,21 @@
       visited)))
 
 (defn part-1 [moves]
-  (count 
-    (houses-visited moves)))
+  (count
+   (houses-visited moves)))
 
 (defn part-2 [moves]
   (let [santa-moves (take-nth 2 moves)
         robo-moves  (take-nth 2 (rest moves))
         santa-houses-visited (houses-visited santa-moves)
         robo-houses-visited  (houses-visited robo-moves)]
-    (count 
-      (set/union santa-houses-visited robo-houses-visited))))
+    (count
+     (set/union santa-houses-visited robo-houses-visited))))
 
 (comment
   (part-1 moves) ;; 2592
-  (part-2 moves)) ;; 2360
-  
+  (part-2 moves) ;; 2360
+  )
+
+
 
