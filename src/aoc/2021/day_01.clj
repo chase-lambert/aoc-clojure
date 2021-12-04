@@ -28,16 +28,5 @@
 (comment
   (part-1 measurements) ;; 1696
   (part-2 measurements) ;; 1737
+  ,)
 
-  ;; My favorite solution by others:
-  (defn part-1 [measurements]
-    (->> measurements
-         (partition 2 1)
-         (filter #(apply < %))
-         (count)))
-
-  (defn part-2 [measurements]
-    (->> measurements
-         (partition 3 1)
-         (map #(apply + %))
-         (part-1))))
