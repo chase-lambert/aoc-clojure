@@ -17,13 +17,9 @@
        count))
 
 (defn part-2 [measurements]
-  (let [windows (partition 3 1 measurements)]
-    (count
-     (for [i (range 1 (count windows))
-           :let [sum-a (apply + (nth windows (dec i)))
-                 sum-b (apply + (nth windows i))]
-           :when (> sum-b sum-a)]
-       i))))
+  (->> (partition 3 1 measurements)
+       (map #(apply + %))
+       part-1))
 
 (comment
   (part-1 measurements) ;; 1696
