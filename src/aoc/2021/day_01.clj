@@ -11,10 +11,10 @@
        (map parse-long)))
 
 (defn part-1 [measurements]
-  (count
-   (for [i (range 1 (count measurements))
-         :when (> (nth measurements i) (nth measurements (dec i)))]
-     i)))
+  (->> (partition 2 1 measurements)
+       (filter (fn [[a b]]
+                 (> b a)))
+       count))
 
 (defn part-2 [measurements]
   (let [windows (partition 3 1 measurements)]
