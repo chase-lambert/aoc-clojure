@@ -1,13 +1,13 @@
 (ns aoc.2021.day-01
   (:require
-   [clojure.string :as string]))
+   [clojure.string :as str]))
 
 (def input
   (slurp "resources/2021/day_01.txt"))
 
 (def measurements
   (->> input
-       (string/split-lines)
+       (str/split-lines)
        (map parse-long)))
 
 (defn part-1 [measurements]
