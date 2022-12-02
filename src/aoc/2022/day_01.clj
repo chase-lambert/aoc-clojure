@@ -15,17 +15,17 @@
        (partition-by nil?)
        (remove #(nil? (first %)))
        (map (partial apply +))
-       (sort)))
+       sort
+       reverse))
 
 (defn part-1 [data]
   (->> data
        sort-data
-       last))
+       first))
 
 (defn part-2 [data]
   (->> data
        sort-data
-       reverse
        (take 3)
        (apply +)))
 
