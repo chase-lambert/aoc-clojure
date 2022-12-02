@@ -8,10 +8,7 @@
 (def data
   (->> input
        (str/split-lines)
-       (map parse-long)))
-
-(defn sort-data [data]
-  (->> data
+       (map parse-long)
        (partition-by nil?)
        (remove #(nil? (first %)))
        (map (partial apply +))
@@ -19,13 +16,10 @@
        reverse))
 
 (defn part-1 [data]
-  (->> data
-       sort-data
-       first))
+  (first data))
 
 (defn part-2 [data]
   (->> data
-       sort-data
        (take 3)
        (apply +)))
 
