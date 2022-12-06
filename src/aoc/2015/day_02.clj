@@ -45,7 +45,5 @@
 
 (comment
   (part-1 boxes) ;; 1598415
-  (part-2 boxes) ;; 3812909
-  )
-
-
+  (part-2 boxes)) ;; 3812909
+  

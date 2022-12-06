@@ -26,6 +26,8 @@
 (comment
   (part-1 input) ;; 117946
   (part-2 input) ;; 3938038
-  )
+  (time (part-2 input)) ;; 3938038
+  ,) 
+  
 
 

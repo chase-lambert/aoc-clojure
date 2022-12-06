@@ -31,11 +31,11 @@
 
 (defn part-2 [moves]
   (let [santa-moves (take-nth 2 moves)
-        robo-moves  (take-nth 2 (rest moves))
+        robot-moves (take-nth 2 (rest moves))
         santa-houses-visited (houses-visited santa-moves)
-        robo-houses-visited  (houses-visited robo-moves)]
+        robot-houses-visited (houses-visited robot-moves)]
     (count
-     (set/union santa-houses-visited robo-houses-visited))))
+     (set/union santa-houses-visited robot-houses-visited))))
 
 (comment
   (part-1 moves) ;; 2592
