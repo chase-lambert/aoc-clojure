@@ -1,2 +1,5 @@
-{:deps {org.clojure/clojure    {:mvn/version "1.11.0-alpha3"}
+{:paths ["src" "resources"]
+ 
+ :deps {org.clojure/clojure    {:mvn/version "1.12.0-alpha4"}
+        criterium/criterium    {:mvn/version "0.4.6"}       
         org.clj-commons/digest {:mvn/version "1.4.100"}}}
